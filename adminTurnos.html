@@ -4,9 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador de Turnos</title>
-</head>
-<body>
     
+    <title>Adiministracion de Turnos</title>
+    <meta name="author" content="Grupo 2 - 16i - 2022" />
+    <meta name="keywords" content="Turnos, Administracion, CRUD,JavaScript" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/rollingMed.css">
+</head>
+<body class="bg-med">
+
+    <main class="container  my-4">
+
+        <hr />
+
+        <section class="bg-transparent container text-dark py-3 rounded">
+            <form id="formTurnos">
+              <div class="mb-3">
+                <label for="listaPacientes" class="form-label">Paciente</label>
+                
+                <select class="form-select" aria-label="listaPacientesDesplegable" id="listaPacientes" required>
+                    <option selected>Aqui se cargarian la lista de pacientes desde el otro archivo</option>
+                    
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="selectMedicos" class="form-label">Medico</label>
+                <select class="form-select" aria-label="listaPacientesDesplegable" id="selectMedicos" required>
+                    
+                    <option selected>Seleccione un Profesional</option>
+                    
+                </select>
+
+                
+              </div>
+
+              
+
+              <div class="mb-3">
+                <label for="diaHoraTurno" class="form-label">Fecha y Hora del Turno</label>
+                <input
+                  type="datetime-local"
+                  class="form-control required"
+                  id="diaHoraTurno"
+                  required
+                  
+                />
+                <div id="diaHoraTurno__feedback" class="invalid-feedback">
+                  No es posible asignar el turno
+                </div>
+              </div>
+              
+              <div class="text-end">
+                <button id="buttonCargar" class="btn btn-grad" type="submit">Cargar</button>
+              </div>
+            </form>
+          </section>
+          <hr />
+          
+
+    </main>
+
+    
+
+
+    <script type="module" src="./js/adminTurnos.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
 </body>
 </html>

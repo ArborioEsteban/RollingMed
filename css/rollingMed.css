@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+* {
+  font-family: "Mouse Memoirs";
+}
+
+.bg-med {
+  background-image: url("/src/medicoBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #0000ff 0%,
+    #00e6ff 51%,
+    #4400db 100%
+  );
+  margin: 5px;
+  padding: 15px 35px;
+  text-align: center;
+
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+
