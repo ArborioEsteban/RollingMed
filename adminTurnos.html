@@ -25,38 +25,50 @@
 
         <section class="bg-transparent container text-dark py-3 rounded">
             <form id="formTurnos">
+
               <div class="mb-3">
                 <label for="listaPacientes" class="form-label">Paciente</label>
                 
-                <select class="form-select" aria-label="listaPacientesDesplegable" id="listaPacientes" required>
-                    <option selected>Aqui se cargarian la lista de pacientes desde el otro archivo</option>
-                    
+                <select class="form-select" aria-label="listaPacientes" id="listaPacientes" required>
+                  <option value="ccurso">ccurso</option>
                 </select>
+                <div id="listaPacientes__feedback" class="invalid-feedback">
+                  Seleccione un Paciente
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="selectMedicos" class="form-label">Medico</label>
-                <select class="form-select" aria-label="listaPacientesDesplegable" id="selectMedicos" required>
-                    
-                    <option selected>Seleccione un Profesional</option>
-                    
-                </select>
 
-                
+              <div class="mb-3">
+                <label for="listaMedicos" class="form-label">Medico</label>
+                <select class="form-select" aria-label="listaMedicosDesplegable" id="listaMedicos" required></select>
+                <div id="listaMedicos__feedback" class="invalid-feedback">
+                  Seleccione un Medico
+                </div>
               </div>
 
               
 
               <div class="mb-3">
-                <label for="diaHoraTurno" class="form-label">Fecha y Hora del Turno</label>
+                <label for="diaTurno" class="form-label">Fecha del Turno</label>
                 <input
-                  type="datetime-local"
+                  type="date"
                   class="form-control required"
-                  id="diaHoraTurno"
+                  id="diaTurno"
+                  onkeydown="return false"
+
                   required
                   
                 />
-                <div id="diaHoraTurno__feedback" class="invalid-feedback">
-                  No es posible asignar el turno
+                <div id="diaTurno__feedback" class="invalid-feedback">
+                  No es posible asignar el turno en ese dia
+                </div>
+              </div>
+
+              <div class="mb-3">
+
+                <label for="appt-time" class="form-label">Hora del Turno (8am a 18pm)</label>
+                <input id="appt-time" type="time" class="form-control" name="appt-time"/>
+                <div id="appt-time__feedback" class="invalid-feedback">
+                  No es posible asignar el turno en ese horario
                 </div>
               </div>
               
