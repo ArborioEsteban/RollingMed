@@ -7,3 +7,4 @@ export class Turno {
       this.codigo = Math.floor(Math.random() * 1000);
     }
   }
+
