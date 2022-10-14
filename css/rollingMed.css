@@ -4,7 +4,7 @@
 }
 
 .bg-med {
-  background-image: url("/src/medicoBackground.jpg");
+  background-image: url("../src/medicoBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -38,4 +38,8 @@
   text-decoration: none;
 }
 
-
+.botonTarea{
+  background: transparent;
+  outline: none;
+  border: 0;
+}
