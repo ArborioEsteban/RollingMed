@@ -1,4 +1,8 @@
+import { deleteTurno } from "./delete.js";
 import { Turno } from "./Turno.js";
+import { cargarDatosEnFormulario } from "./update.js";
+
+
 
 
 export const crearTurnoTabla = (turno) => {
@@ -27,64 +31,45 @@ export const crearTurnoTabla = (turno) => {
   td5.innerText = turno.hora;
   tr.appendChild(td5);
 
+
+  const buttonEditar = document.createElement("button");
+  buttonEditar.type = "button";
+  buttonEditar.classList = "botonTarea";
+
+  const buttonEliminar = document.createElement("button");
+  buttonEliminar.type = "button";
+  buttonEliminar.classList = "botonTarea";
+
+  const iEditar = document.createElement("i");
+  iEditar.classList = "fa-solid fa-pencil ms-3";
+
+  const iEliminar = document.createElement("i");
+  iEliminar.classList = "fa-solid fa-trash-can ms-3";
+
+  buttonEditar.appendChild(iEditar);
+  buttonEliminar.appendChild(iEliminar);
+
+  buttonEditar.onclick = () => {
+    cargarDatosEnFormulario(turno.codigo);
+    
+
+  }
+
+  buttonEliminar.onclick = () => {
+    deleteTurno(turno.codigo);
+  }
+
+
+  const td6 = document.createElement("td");
+
+  td6.appendChild(buttonEditar);
+  td6.appendChild(buttonEliminar);
+
+  tr.appendChild(td6);
+
+
+
   tbody.appendChild(tr);
 
 }
   
-
-//   tr.appendChild(td5);
-//   //
-//   //
-//   const td2 = document.createElement("td");
-
-//   td2.innerText = contacto.nombre;
-
-//   tr.appendChild(td2);
-//   //
-//   //
-//   const td3 = document.createElement("td");
-
-//   td3.innerText = contacto.telefono;
-
-//   tr.appendChild(td3);
-//   //
-//   //
-//   const td4 = document.createElement("td");
-
-//   td4.innerText = contacto.email;
-
-//   tr.appendChild(td4);
-//   //
-//   //
-//   const td6 = document.createElement("td");
-
-//   td6.innerText = contacto.notas;
-
-//   tr.appendChild(td6);
-//   //
-//   const td7 = document.createElement("td");
-//   const buttonEditar = document.createElement("button");
-//   const buttonEliminar = document.createElement("button");
-
-//   buttonEditar.classList = "btn btn-warning mb-2 me-2"
-//   buttonEliminar.classList = "btn btn-danger mb-2"
-
-//   buttonEditar.innerText = "Editar"
-//   buttonEliminar.innerText = "Eliminar"
-
-//   buttonEditar.onclick = () => {
-//     cargarDatosEnFormulario(contacto.codigo)
-//   }
-
-//   buttonEliminar.onclick = () => {
-//     deleteContacto(contacto.codigo)
-//   }
-
-//   td7.appendChild(buttonEditar)
-//   td7.appendChild(buttonEliminar)
-
-//   tr.appendChild(td7);
-//   //
-
-//   tbody.appendChild(tr);
-
