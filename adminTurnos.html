@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Adiministracion de Turnos</title>
     <meta name="author" content="Grupo 2 - 16i - 2022" />
     <meta name="keywords" content="Turnos, Administracion, CRUD,JavaScript" />
@@ -20,7 +19,7 @@
 </head>
 <body class="bg-med">
 
-    <main class="container  my-4">
+    <main class="container  my-2">
 
         <hr />
 
@@ -31,8 +30,7 @@
                 <label for="listaPacientes" class="form-label">Paciente</label>
                 
                 <select class="form-select" aria-label="listaPacientes" id="listaPacientes" required>
-                  <option value="ccurso">ccurso</option>
-                  <option value="ccurso123">ccurso123</option>
+                  
                 </select>
                 <div id="listaPacientes__feedback" class="invalid-feedback">
                   Seleccione un Paciente
@@ -47,7 +45,7 @@
                 </div>
               </div>
 
-              
+              <!-- onkeydown="return false" -->
 
               <div class="mb-3">
                 <label for="diaTurno" class="form-label">Fecha del Turno</label>
@@ -55,7 +53,7 @@
                   type="date"
                   class="form-control required"
                   id="diaTurno"
-                  onkeydown="return false"
+                  
                   required
                   
                 />
@@ -81,19 +79,21 @@
           <hr />
           
 
+          <a href="./adminUsuarios.html" class=" my-3 text-decoration-none text-white w-25 btn-grad botonTarea" type="button">Admin Usuarios</a>
+          
           <table class="table 
           ">
             <thead>
               <tr class="bg-table-turno text-white">
-                <th scope="col" class="fs-4">Codigo</th>
-                <th scope="col" class="fs-4">Medico</th>
-                <th scope="col" class="fs-4">Paciente</th>
-                <th scope="col" class="fs-4">Dia</th>
-                <th scope="col" class="fs-4">Hora</th>
-                <th scope="col" class="fs-4"></th>
+                <th scope="col" class="fs-2">Codigo</th>
+                <th scope="col" class="fs-2">Medico</th>
+                <th scope="col" class="fs-2">Paciente</th>
+                <th scope="col" class="fs-2">Dia</th>
+                <th scope="col" class="fs-2">Hora</th>
+                <th scope="col" class="fs-2"></th>
               </tr>
             </thead>
-            <tbody id="tbody__turno" class=" bg-light text-dark ">
+            <tbody id="tbody__turno" class="bg-light text-dark ">
               
             </tbody>
           </table>
