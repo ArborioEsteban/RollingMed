@@ -14,14 +14,16 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/45b378868f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/usuarioMed.css">
+    <link rel="stylesheet" href="./css/rollingMed.css">
     <title>CRUD Usuarios</title>
   </head>
-  <body>
+  <body class="bg-med">
     <header></header>
     <main>
         <div id="divLogin">
-        <img id="imagenLogin" src="./src/medical-physician-doctor-man.jpg" alt="imagen login">
+        <!-- <img id="imagenLogin" src="./src/medical-physician-doctor-man.jpg" alt="imagen login"> -->
         </div>
         <div id="divForm" class="container pt-5">
             <div class="row col-6">
@@ -83,31 +85,33 @@
             ></textarea>
           </div>
           <div class="text-end mt-3">
-            <button id="buttonLogin" class="btn" type="submit">Cargar</button>
+            <button id="buttonLogin" class="btn-grad botonTarea" type="submit">Cargar</button>
           </div>
         </form>
       </section>
       <hr class="mt-4">
+      
+      <a href="./adminTurnos.html" class="text-decoration-none text-white w-50 btn-grad botonTarea" type="button">Administrar Turnos</a>
     </div>
     </div>
-    <div class="bg-dark">
+    <div class="bg-transparent text-dark mt-2">
     <div  class="container" >
-      <section id="Section2">
+      <section id="Section2" class="bg-transparent">
         <h3>Usuarios cargados</h3>
       </section>
       <section>
-        <table class="table">
+        <table class="table ">
           <thead>
-            <tr>
-              <th class="text-light" scope="col">#</th>
-              <th class="text-light" scope="col">Nombre</th>
-              <th class="text-light" scope="col">Apellido</th>
-              <th class="text-light" scope="col">Edad</th>
-              <th class="text-light" scope="col">Nota</th>
-              <th class="text-light" scope="col">Acciones</th>
+            <tr tr class="bg-table-turno text-light">
+              <th class="fs-3" scope="col">#</th>
+              <th class="fs-3" scope="col">Nombre</th>
+              <th class="fs-3" scope="col">Apellido</th>
+              <th class="fs-3" scope="col">Edad</th>
+              <th class="fs-3" scope="col">Nota</th>
+              <th class="fs-3 text-left" scope="col">Acciones</th>
             </tr>
           </thead>
-          <tbody id="tbodyAdmin"></tbody>
+          <tbody id="tbodyAdmin" class="bg-light text-dark"></tbody>
         </table>
       </section>
     </div>

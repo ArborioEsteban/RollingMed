@@ -34,11 +34,11 @@ export const crearTurnoTabla = (turno) => {
 
   const buttonEditar = document.createElement("button");
   buttonEditar.type = "button";
-  buttonEditar.classList = "botonTarea";
+  buttonEditar.classList = "botonEditDelete";
 
   const buttonEliminar = document.createElement("button");
   buttonEliminar.type = "button";
-  buttonEliminar.classList = "botonTarea";
+  buttonEliminar.classList = "botonEditDelete";
 
   const iEditar = document.createElement("i");
   iEditar.classList = "fa-solid fa-pencil ms-3";

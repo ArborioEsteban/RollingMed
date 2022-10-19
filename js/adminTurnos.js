@@ -11,9 +11,35 @@ const buttonCargar = document.getElementById("buttonCargar");
 
 let turnosLStorage = localStorage.getItem("turnos");
 turnosLStorage = JSON.parse(turnosLStorage);
-
+// console.log(turnosLStorage);
+let listaPacientesLS = localStorage.getItem("usuarios");
+listaPacientesLS = JSON.parse(listaPacientesLS);
+console.log(listaPacientesLS);
 
 let turnosArray = [];
+let listaPacientes=[];
+
+
+const nombrePaciente = document.getElementById("listaPacientes");
+const optionDefaultPaciente = document.createElement("option");
+
+// recordar poner el value a 1 para poder verificar q no este seleccionada la opcion por defecto
+optionDefaultPaciente.value = 1;
+optionDefaultPaciente.innerText = "Seleccione un paciente";
+nombrePaciente.appendChild(optionDefaultPaciente);
+
+if(listaPacientesLS != null){
+  listaPacientes = listaPacientesLS;
+  listaPacientes.forEach((paciente) =>{
+    let desplegablePaciente = document.createElement("option");
+    let nombreYApellido = paciente.nombre + " " + paciente.apellido
+    desplegablePaciente.value = nombreYApellido;
+    desplegablePaciente.innerText = nombreYApellido;
+    nombrePaciente.appendChild(desplegablePaciente);
+  })
+
+}
+
 
 if(turnosLStorage != null){
     turnosArray = turnosLStorage;
@@ -21,7 +47,7 @@ if(turnosLStorage != null){
     // crearTurnoTabla , aqui conviene agregar otra funcion en otro javascript para cuando toque cargar y mostrar los turnos
     turnosArray.forEach((turno) => {
       crearTurnoTabla(turno);
-      console.log(turnosArray);
+      
     });
 }
 
@@ -50,13 +76,7 @@ selectMedicos.appendChild(medico3);
 
 let formTurnos = document.getElementById("formTurnos");
 
-const nombrePaciente = document.getElementById("listaPacientes");
-const optionDefaultPaciente = document.createElement("option");
 
-// recordar poner el value a 1 para poder verificar q no este seleccionada la opcion por defecto
-optionDefaultPaciente.value = 1;
-optionDefaultPaciente.innerText = "Seleccione un paciente";
-nombrePaciente.appendChild(optionDefaultPaciente);
 
 // agregar maximo y minimo para la hora
 const horario = document.getElementById("appt-time");
@@ -68,10 +88,17 @@ horario.setAttribute("max", "18:00");
 let fecha = new Date();
 // establecerlo en fecha del dia d hoy
 fecha.setDate(fecha.getDate());
+
 // Obtener cadena en formato yyyy-mm-dd, eliminando zona y hora
 let fechaMin = fecha.toISOString().split("T")[0];
-// Asignar valor mínimo(o sea el dia de hoy)
+
+
+// Asignar valor maximo (100 años a partir del dia de hoy)
 document.querySelector("#diaTurno").min = fechaMin;
+const fechaMaxima = new Date(2122, 0, 1);
+let fechaMaximaTurno = fechaMaxima.toISOString().split("T")[0];
+document.querySelector("#diaTurno").max = fechaMaximaTurno;
+
 
 const dia = document.getElementById("diaTurno");
 
@@ -103,6 +130,7 @@ nombrePaciente.addEventListener("blur", (e) => {
 //Aqui capturamos el boton de submit del formulario
 formTurnos.addEventListener("submit", (e) => {
   e.preventDefault();
+  
   let isEditando;
 
   if(buttonCargar.innerText === "Editar"){
