@@ -1,4 +1,5 @@
 import { cargarDatosEnForm } from "./usuarioActualizar.js";
+import { deleteUsuario } from "./usuarioEliminar.js";
 
 
 export const crearUsuarioTabla = (usuario) =>{
@@ -41,6 +42,10 @@ export const crearUsuarioTabla = (usuario) =>{
 
     bottonEditar.onclick = ()=>{
         cargarDatosEnForm(usuario.codigo)
+    }
+
+    bottonEliminar.onclick = ()=>{
+        deleteUsuario(usuario.codigo)
     }
 
     tdBotones.appendChild(bottonEditar)

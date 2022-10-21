@@ -23,6 +23,7 @@ let campoNombre = document.getElementById("nombreUsuario");
 let campoApellido = document.getElementById("ApellidoUsuario");
 let campoFechaNacimiento = document.getElementById("fechaNacimientoUsuario");
 let campoNotas = document.getElementById("notasUSuario");
+let buttoncargar = document.getElementById("buttonLogin")
 
 let formUsuario = document.getElementById("formAdmin");
 
@@ -58,18 +59,72 @@ const agregarUsuarioLs = (usuario) => {
 formUsuario.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  let isEditando;
+
+  if(buttoncargar.innerHTML==="Actualizar"){
+    isEditando = true;
+  } else {
+    isEditando = false;
+  }
+
+  nombre = campoNombre.value;
+  apellido=campoApellido.value;
+  fechaNacimiento=campoFechaNacimiento.value;
+  notas =campoNotas.value;
+
   if (
     validarNombre(nombre, campoNombre) &&
     validarApellido(apellido, campoApellido) &&
     validarFecha(fechaNacimiento, campoFechaNacimiento)
   ) {
+
+    if(!isEditando){
     const usuario = new Usuario(nombre, apellido, fechaNacimiento, notas, edad);
-    crearUsuarioTabla(usuario);
     agregarUsuarioLs(usuario);
     Swal.fire("Exito!", "Usuario cargado exitosamente!", "success");
+    } else {
+      const codigo = Number(sessionStorage.getItem("codigoEdicion"))
+      sessionStorage.removeItem("codigoEdicion")
+
+      const usuarioIndice = usuarios.findIndex((elemento)=>{
+        return elemento.codigo === codigo
+      });
+      usuarios[usuarioIndice].nombre = nombre;
+      usuarios[usuarioIndice].apellido = apellido;
+      usuarios[usuarioIndice].fechaNacimiento = fechaNacimiento;
+      usuarios[usuarioIndice].notas = notas;
+
+      localStorage.setItem("usuarios",JSON.stringify(usuarios))
+
+      Swal.fire("Exito!", "Usuario Actualizado exitosamente!", "success");
+
+      buttoncargar.innerHTML="cargar"
+
+    }
+
+    recargarUsuarios();
+    
     formUsuario.reset()
-    return 
+    campoApellido.classList = "form-control"
+    campoNombre.classList = "form-control"
+    campoFechaNacimiento.classList = "form-control"
+    nombre = ""
+    apellido = ""
+    fechaNacimiento = ""
+    notas = ""
   } else {
     Swal.fire("Error!", "Verifique los campos", "error");
   }
 });
+
+export const recargarUsuarios = () =>{
+  const usuariosLs = JSON.parse(localStorage.getItem("usuarios")).reverse();
+
+  const tbody = document.getElementById("tbodyAdmin");
+
+  tbody.innerHTML = "";
+
+  usuariosLs.forEach((elemento)=>{
+    crearUsuarioTabla(elemento)
+  })
+}
