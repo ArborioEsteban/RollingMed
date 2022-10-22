@@ -19,9 +19,27 @@
 </head>
 <body class="bg-med">
 
-    <main class="container  my-2">
+    <main class="container my-2">
 
+      <div class="row">
+        <div class="col-6 text-center margin-auto">
+
+            <a href="./adminUsuarios.html" class=" my-3 text-decoration-none text-white w-75 btn-grad botonTarea fs-4" type="button">Admin Usuarios</a>
+        </div>
+        <div class="col-6 text-center margin-auto">
+            <a href="./adminPrincipal.html" class=" my-3 text-decoration-none text-white w-75 btn-grad botonTarea fs-4" type="button">Admin Principal</a>
+
+        </div>
+
+        <hr/>
+      </div>
+      
+      <section class="my-4">
+        <h1>Cargar Turno</h1>
         <hr />
+      </section>
+
+        
 
         <section class="bg-transparent container text-dark py-3 rounded">
             <form id="formTurnos">
@@ -65,7 +83,7 @@
               <div class="mb-3">
 
                 <label for="appt-time" class="form-label">Hora del Turno (8am a 18pm)</label>
-                <input id="appt-time" type="time" class="form-control" name="appt-time"/>
+                <input id="appt-time" type="time" class="form-control" name="appt-time" required/>
                 <div id="appt-time__feedback" class="invalid-feedback">
                   No es posible asignar el turno en ese horario
                 </div>
@@ -79,7 +97,7 @@
           <hr />
           
 
-          <a href="./adminUsuarios.html" class=" my-3 text-decoration-none text-white w-25 btn-grad botonTarea" type="button">Admin Usuarios</a>
+          
           
           <table class="table 
           ">
@@ -90,7 +108,7 @@
                 <th scope="col" class="fs-2">Paciente</th>
                 <th scope="col" class="fs-2">Dia</th>
                 <th scope="col" class="fs-2">Hora</th>
-                <th scope="col" class="fs-2"></th>
+                <th scope="col" class="fs-2">Editar / Eliminar</th>
               </tr>
             </thead>
             <tbody id="tbody__turno" class="bg-light text-dark ">
