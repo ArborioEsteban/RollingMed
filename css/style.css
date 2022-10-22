@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+* {
+  font-family: "Mouse Memoirs";
+}
+
+
+
 
 /*DEFAULT*/
 *,
@@ -13,8 +19,6 @@ html {
   box-sizing: border-box;
 }
 :root {
- 
-
   --white: #fff;
   --black: #000;
   --blue: #0084b4;
@@ -30,7 +34,7 @@ html {
 }
 ::-webkit-scrollbar-thumb {
   background: rgb(247, 243, 243);
-  /* -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75); */
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
 }
 ::-webkit-scrollbar-corner {
   background: #000;
@@ -53,10 +57,6 @@ a,
 button {
   transition: 0.5s;
 }
-
-
-
-
 
 /*HEADER*/
 header {
@@ -108,7 +108,17 @@ header .btn1 {
   }
 }
 
-/*NAVIGATION*/ 
+.nav1{
+  display: flex;
+  justify-content: start;
+}
+.nav2{
+  display: flex;
+  justify-content: end;
+  
+}
+
+/*NAVIGATION*/
 .topnav {
   overflow: hidden;
   background-color: #230a59;
@@ -126,92 +136,13 @@ header .btn1 {
   font-weight: 600;
 }
 
-.topnav a:not(:first-child),
-.dropdown,
-#navbar a:not(:first-child) {
-  margin: 15px;
-}
-
 #logo {
   float: left;
 }
 
-#logo img {
-  width: 80px;
-}
-
 #active {
   color: hsl(168, 75%, 55%);
-}
-
-.topnav .icon {
-  display: none;
-  position: absolute;
-  right: 10px;
-  top: 40px;
-}
-
-.dropdown,
-.sub-dropdown {
-  float: right;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn,
-.sub-dropdown .sub-dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: hsl(0, 20%, 2%);
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-  text-transform: uppercase !important;
-  font-weight: 600;
-}
-
-.sub-dropdown {
-  text-align: left !important;
-  padding: 0px 0px;
-  margin: 0 !important;
-  float: none;
-  border-bottom: 1px solid black;
-}
-
-.sub-dropdown .fa {
-  float: left;
-  margin: 0 10px;
-  position: relative;
-  top: 3px;
-}
-
-.dropdown-content,
-.sub-dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px black;
-  z-index: 1;
-  border-top: 2px solid hsl(168, 75%, 55%);
-}
-
-.sub-dropdown-content {
-  right: 100%;
-}
-
-.dropdown-content a,
-.sub-dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  margin: 0px !important;
-  text-transform: uppercase !important;
-  border-bottom: 1px solid black;
+  padding: 40px;
 }
 
 .topnav a:hover,
@@ -225,78 +156,7 @@ header .btn1 {
   color: hsl(168, 75%, 55%);
 }
 
-.dropdown:hover .dropdown-content,
-.sub-dropdown:hover .sub-dropdown-content {
-  display: block;
-}
 
-@media screen and (max-width: 640px) {
-  #logo {
-    float: left;
-    width: 90%;
-  }
-  #logo img {
-    width: 80px;
-    float: left;
-  }
-  .topnav a:not(:first-child),
-  .dropdown,
-  #navbar a:not(:first-child) {
-    margin: 0px;
-  }
-  .topnav a:not(:first-child),
-  .dropdown .dropbtn,
-  .sub-dropdown .sub-dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive .dropdown,
-  .topnav.responsive .sub-dropdown {
-    float: none;
-  }
-  .topnav.responsive .dropdown-content,
-  .topnav.responsive .sub-dropdown-content {
-    position: relative;
-  }
-  .topnav.responsive .dropdown .dropbtn,
-  .topnav.responsive .sub-dropdown .sub-dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-  .dropdown-content,
-  .sub-dropdown-content {
-    position: relative;
-  }
-  .sub-dropdown-content {
-    right: 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .topnav .icon {
-    top: 50px;
-  }
-}
 
 #navbar {
   background-color: var(--white);
@@ -325,33 +185,34 @@ header .btn1 {
   color: hsl(168, 75%, 55%);
 }
 
-#logo2 {
-  float: left;
+
+
+
+.colores {
+  color: hsl(168, 75%, 55%);
 }
 
-#logo2 img {
-  width: 80px;
+.color_barra {
+  background-color: hsla(188, 92%, 67%, 0.29);
 }
 
-@media (max-width: 640px) {
-  #navbar {
-    display: none !important;
-  }
+#logo img {
+  width: 80%;
+  height: 70%;
+  display: flex;
 }
 
-
-
-.colores{
-
-  color:hsl(168, 75%, 55%);
+#contact {
+  padding: 40px;
+}
+#nosotros {
+  padding: 40px;
 }
 
-
-
-.color_barra{
-
-  background-color:hsla(188, 92%, 67%, 0.29) ;
+.img_central{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  object-fit: cover;
 }
 
-
- 

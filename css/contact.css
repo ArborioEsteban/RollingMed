@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+/* ----------Inicio Contacto ------------*/
+#contacto__mainDivVacio {
+  height: 55px;
+  font-family: "Mouse Memoirs", sans-serif;
+  font-weight: 300px;
+}
+#footer{
+  background-color:#230a59;
+}
+
+#contacto__main__sectionH3 {
+  font-family: "Mouse Memoirs", sans-serif;
+  font-size: 30px;
+}
+#contacto__main__segundaColumna {
+  height: 50vh;
+}
+#contacto__main__segundaColumnaComoMeComunico {
+  font-family: "Mouse Memoirs", sans-serif;
+  font-size: 25px;
+  font-weight: 200;
+  color: #182848;
+}
+#contacto__main__segundaColumnaHR {
+  color: rgb(87, 83, 83);
+  width: 40vw;
+}
+.contacto__columnasResponsive {
+  display: flex;
+}
+
+#main__contacto {
+  background: rgb(2, 15, 42);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 15, 42, 1) 0%,
+    rgba(21, 79, 148, 1) 51%,
+    rgba(2, 15, 42, 1) 100%
+  );
+}
+/* ----------Fin Contacto ------------*/
+
+/* Formulario de Contacto */
+.contacto__columnasResponsive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+#contacto__main__segundaColumnaHR {
+  visibility: hidden;
+}
+/* fin formulario de Contacto */
+
+@media screen and (max-width: 768px) {
+}
+
+/* ----------Inicio Contacto ------------*/
+.contacto__columnasResponsive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+#contacto__main__segundaColumnaHR {
+  visibility: hidden;
+}
+
+.contacto__columnasResponsive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contacto__columnasResponsive {
+  display: inline-block;
+}
+
+/* ----------Fin Contacto ------------*/
