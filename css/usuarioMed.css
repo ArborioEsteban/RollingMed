@@ -1,22 +1,48 @@
-#imagenLogin{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+* {
+  font-family: "Mouse Memoirs";
+}
+
+#bodyUsuarios{
+    background-image: url("../src/medical-physician-doctor-man.jpg");
+      background-size: cover;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #divForm{
     position: relative
+    
 }
 
 #buttonLogin{
     background-color: #0099FF
+    
 }
 
-#Section2{
+#divUsuariosCargados{
     position: relative;
+    z-index: 200;
 }
 
-#tbodyAdmin{
-    background-color: #0099ff
+#divUsuariosCargados{
+    background-color: #0099ff7e
 }
+
+.botonDelete{
+    background: transparent;
+    outline: none;
+    border: 0;
+    padding: auto;
+    margin-right: auto
+}
+
+.botonEdit{
+    background: transparent;
+    outline: none;
+    border: 0;
+    margin: auto;
+    padding: 0;
+}
+
+

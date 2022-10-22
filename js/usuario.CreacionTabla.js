@@ -34,11 +34,18 @@ export const crearUsuarioTabla = (usuario) =>{
     const tdBotones = document.createElement("td")
     const bottonEditar = document.createElement("button");
     const bottonEliminar = document.createElement("button");
+
+    const iEditar = document.createElement("i")
+    iEditar.classList = "fa-solid fa-pencil ms-3"
+
+    const iEliminar = document.createElement("i")
+    iEliminar.classList = "fa-solid fa-trash-can ms-3"
+
+    bottonEditar.classList = "botonEdit"
+    bottonEliminar.classList = "botonDelete"
     
-    bottonEditar.classList = "btn btn-warning me-2 mb-2"
-    bottonEliminar.classList = "btn btn-danger"
-    bottonEditar.innerText = "Editar"
-    bottonEliminar.innerText = "Elimiar"
+    bottonEditar.appendChild(iEditar)
+    bottonEliminar.appendChild(iEliminar)
 
     bottonEditar.onclick = ()=>{
         cargarDatosEnForm(usuario.codigo)
