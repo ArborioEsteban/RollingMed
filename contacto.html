@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pagina de contacto, rollingmed, formulario">
+    <meta name="author" content="grupo2">
+    <title>Pagina de Contacto</title>
+    <link rel="stylesheet" href="./css/contact.css">
+    <!-- <link rel="stylesheet" href="../bootstrap-5.2.0-dist/css/bootstrap.min.css"/> -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/10942c11e8.js" crossorigin="anonymous"></script>
+
+    <title>Pagina de contacto Rollingmed</title>
+
+</head>
+
+
+<body>
+    <main id="main__contacto">
+        <div class="text-light contacto__small__responsive bg-transparent">
+            <div id="contacto__mainSection"></div>
+            <article class=" mb-0 mt-2 text-bg-secondary text-bottom bg-transparent ">
+                <div class="container bg-transparent">
+                </div>
+            </article>
+        </div>
+        </div>
+        <div class="contacto__columnasResponsive">
+
+            <!--primera columna-->
+            <div class="container">
+                <section>
+                    <article class=" ps-lg-5 text-light col-lg-12 col-sm-12">
+                        <div class="container">
+                            <h3 class="display-6 m-3">Mensajes y Consultas</h3>
+                            <hr>
+                        </div>
+                        <form class="formularioContacto" id="formularioContacto">
+                            <div class="container mb-1">
+                                <label for="motivoContacto" class="form-label">Motivo de contacto</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Reportar un problema</option>
+                                    <option value="1">Sugerencia</option>
+                                    <option value="3">Otro</option>
+                                </select>
+                            </div>
+                            <div class="container mb-1 w-100 formularioContacto">
+                                <label for="nombreContacto" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" name="nombreContacto" id="formGroupExampleInput"
+                                    placeholder="Ingrese su nombre" required>
+                            </div>
+                            <div class="container mb-1 formularioContacto">
+                                <label for="apellidoContacto" class="form-label" name="apellidoContacto">Apellido</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2"
+                                    placeholder="Ingrese su apellido" required>
+                            </div>
+                            <div class="container mb-1 formularioContacto">
+                                <label for="emailContacto" class="form-label" name="mailContacto">Email</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="nombre@ejemplo.com" required>
+                            </div>
+                            <div class="container mb-3 formularioContacto">
+                                <label for="telefonoContacto" class="form-label" name="telefonoContacto">Teléfono</label>
+                                <input type="number" id="inputPassword5" class="form-control"
+                                    aria-describedby="passwordHelpBlock">
+                                <div id="passwordHelpBlock" class="form-text">
+                                    Cod. área + Número de teléfono
+                                </div>
+                            </div>
+                            <div class="container mb-1 mt-2">
+                                <label for="notasContacto" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="notasContacto" rows="3" required></textarea>
+                            </div>
+                            <div class="container mb-1 mt-1">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <input type="submit" class="btn btn-grad text-white">
+                                </div>
+                        </form>
+                    </article>
+                </section>
+            </div>
+
+            <!-- segunda columna-->
+            <div class=" text-light text-center contacto__columnasResponsive bg-transparent">
+                <div class="row bg-transparent">
+
+                    <iframe class="contacto__columnasResponsive" id="contacto__main__segundaColumna"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73894.2883366238!2d-65.19948386129354!3d-26.799586792500786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8458e7af%3A0xf74ab0f1db5cd7a7!2sBuenos%20Aires%20437%2C%20T4000IJI%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1666220537453!5m2!1ses-419!2sar"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+                    <div class="container my-4 text-light" id="contacto__main__segundaColumnaHR">
+                        <div>
+                            <h6 class="display-6 text-light" id="contacto__main__segundaColumnaComoMeComunico">¿Cómo me
+                                comunico con la clínica?</h6>
+                            <a class="links-rolling" href="./error.html">
+                                <i class="fa-solid fa-envelope"></i>rollingmed@gmail.com
+                            </a>
+                            <a class="links-rolling" href="./error.html">
+                                <i class="fa-solid fa-comment"></i>+54 381542547
+                                <a class="links-rolling" href="./error.html"><i
+                                        class="fa-sharp fa-solid fa-location-dot"></i>General Paz 542, San Miguel de
+                                    Tucuán.
+
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+    <footer>
+        <div class="text-center p-5 relleno">
+
+
+        </div>
+    </footer>
+
+    <script src="/RollingMed/js/contacto.js"></script>
+    <!-- tuve q cargar scripts de JavaScript directamente via CDN por que localmente no funcionaban dropdown y dropdown navbar al mismo tiempo -->
+    <!-- <script src="/bootstrap-5.2.0-dist/js/bootstrap.bundle.js"></script>
+      <script src="/bootstrap-5.2.0-dist/js/bootstrap.min.js"></script> -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</body>
+
+</html>
