@@ -4,20 +4,37 @@
 }
 
 .bg-med {
-  background-image: url("../src/medicoBackground.jpg");
+  background-image: url("../src/laboratorio1.img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+.bg-contacto {
+  background-image: url("../src/laboratorio1.img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-acercaDe{
+  background: linear-gradient(rgba(4, 3, 20, 0.833), rgba(4, 3, 20, 0.833)),
+    url("../img/laboratorio1.img.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
 
 
 
 .btn-grad {
   background-image: linear-gradient(
     to right,
-    #0000ff 0%,
-    #00e6ff 51%,
-    #4400db 100%
+    #5610ec 0%,
+    #370f90 51%,
+    #230a59 100%
   );
   margin: 5px;
   padding: 15px 35px;
@@ -52,5 +69,5 @@
 }
 
 #navNuestro1{
-  background-color: #0099ff;
+  background-color: #0099ff85;
 }

@@ -10,41 +10,49 @@
 
     <title>navbar y footer RollingMed</title>
 
+    <!--GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet" />
+    
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
     <!-- CSS only -->
     <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" /-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/rollingMed.css">
+    <!-- <link rel="stylesheet" href="./css/indexCopy.css"> -->
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/acercaDe.css">
+    
 </head>
 
 <body>
-    <!--GOOGLE FONT-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
-        rel="stylesheet" />
-
-    <!--FONT AWESOME-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!--HEADER-->
     <header>
+        <div class="fixed-top nav2 me-3 mt-2">
+            <a class="me-2" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-lock me-1"></i>Admin</a></span>
+        </div>
         <section class="nav1">
             <span><a href="./error.html"><i class="fa fa-envelope"></i> RollingMed@gmail.com</a></span>
             <span><a href="./error.html"><i class="fa fa-phone"></i> +54 0381 524545</a></span>
         </section>
-        <section class="nav2">
-            <a class="me-2" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-lock me-3"></i>Admin</a></span>
+        <section class="">
+            <!-- <a class="me-2" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-lock me-3"></i>Admin</a></span> -->
             <!-- Modal para login -->
-            <div class="modal fade bg-med" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+            <div class="modal fade bg-acercaDe" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <div class="modal-header bg-table-turno">
+                        <div class="modal-header bg-contacto">
                             <h2 class="modal-title fs-5 text-dark" id="loginModalLabel">Ingresar Contraseña</h2>
                         </div>
-                        <div class="modal-body bg-table-turno">
+                        <div class="modal-body bg-contacto">
                             <div class="container-fluid">
                                 <div class="row">
                                     <form class="text-center" id="formLogin">
@@ -71,22 +79,28 @@
     </header>
 
     <!--NAVIGATION-->
-    <nav class="navbar navbar-expand-sm" id="navNuestro">
+    <nav class="navbar navbar-expand-sm fixed-top" id="navNuestro">
         <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#myTopnav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="topnav collapse navbar-collapse mt-3" id="myTopnav">
-            <a href="./error.html" id="logo" class="navbar-brand"><img src="./src/Logorollingmed.img.png" alt="Logo RollingMed" /></a>
+        <div class="topnav collapse navbar-collapse mt-1" id="myTopnav">
+            <a href="./index.html" id="logo" class="navbar-brand"><img src="./src/Logorollingmed.img.png" alt="Logo RollingMed" /></a>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a href="./error.html" id="active">Bienvenidos</a>
+                    <a href="#home" id="active">Bienvenidos</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./acercaDe.html">Nosotros</a>
+                    <a href="#contacto">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./contacto.html">Contacto</a>
+                    <a href="#nosotros">Nosotros</a>
                 </li>
+
+                <li class="nav-item">
+                    
+                    <a class="me-2" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-lock me-1"></i>Admin</a></span>
+                </li>
+
             </ul>
         </div>
     </nav>
@@ -94,8 +108,189 @@
 
     <!--MAIN-->
 
-    <main>
-        <img src="./src/laboratorio1.img.png" class="img_central" alt="Imagen de un medico en un laboratorio moderno" />
+    <main class="text-white">
+        
+
+        <div class="container-fluid m-0 p-0">
+            
+            <section id="home">
+                <div class="vh-100 bg-acercaDe pt-5">
+                    <h1 class="textoPrincipal">Bienvenidos a RollingMed</h1>
+
+                    
+                </div>
+                
+
+        
+            </section>
+
+            <section id="contacto" class="bg-acercaDe pt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-xl-6">
+                            <h3 class="display-6 m-3">Mensajes y Consultas</h3>
+                            <hr>
+                            <form class="formularioContacto" id="formularioContacto">
+                                <div class="container mb-1">
+                                    <label for="motivoContacto" class="form-label">Motivo de contacto</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Reportar un problema</option>
+                                        <option value="1">Sugerencia</option>
+                                        <option value="3">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="container mb-1 w-100 formularioContacto">
+                                    <label for="nombreContacto" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" name="nombreContacto" id="formGroupExampleInput"
+                                        placeholder="Ingrese su nombre" required>
+                                </div>
+                                <div class="container mb-1 formularioContacto">
+                                    <label for="apellidoContacto" class="form-label" name="apellidoContacto">Apellido</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                                        placeholder="Ingrese su apellido" required>
+                                </div>
+                                <div class="container mb-1 formularioContacto">
+                                    <label for="emailContacto" class="form-label" name="mailContacto">Email</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="nombre@ejemplo.com" required>
+                                </div>
+                                <div class="container mb-3 formularioContacto">
+                                    <label for="telefonoContacto" class="form-label" name="telefonoContacto">Teléfono</label>
+                                    <input type="number" id="inputPassword5" class="form-control"
+                                        aria-describedby="passwordHelpBlock"
+                                        placeholder="Cod. área + Número de teléfono"
+                                        required>
+                                    
+                                </div>
+                                <div class="container mb-1 mt-2">
+                                    <label for="notasContacto" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="notasContacto" rows="3" required></textarea>
+                                </div>
+                                <div class="container mb-1 mt-1">
+                                    <div class="d-grid gap-2 d-md-block">
+                                        <input type="submit" class="btn btn-grad text-light">
+                                    </div>
+                            </form>
+                            
+            
+                        </div>
+                    </div>
+            
+                        
+                    <div class="col-sm-12 col-lg-4 mt-5">
+
+                        <iframe class="contacto__columnasResponsive" id="contacto__main__segundaColumna"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1004781659803!2d-65.2072852!3d-26.836756299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e93a13151%3A0xb598352fc0c71f5b!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1666558356974!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                       
+                
+                        <h6 class="text-light mt-5" id="">¿Cómo me
+                            comunico con la clínica?</h6>
+                        <a class="links-rolling" href="./error.html">
+                            <i class="fa-solid fa-envelope text-light">rollingmed@gmail.com</i>
+                        </a>
+                        <a class="links-rolling" href="./error.html">
+                            <i class="fa-solid fa-comment text-light">+54 381542547</i>
+                            <a class="links-rolling text-dark" href="./error.html">
+                                <i class="fa-sharp fa-solid fa-location-dot text-light">General Paz 542, San Miguel de Tucumán.</i>
+                        </a>
+                    </div>
+            
+            
+                </div>
+
+               
+                
+            </section>
+
+
+            <section id="nosotros" class="bg-acercaDe">
+                <section id="acercaDe__main">
+                    <section class="container">
+                      <article>
+                        <div class="pt-5 mb-5 border-bottom">
+                          <h1 class="col-sm-12 col-md-12 text-center text-light mt-5 display-5">
+                            Acerca de Nosotros
+                          </h1>
+                      </article>
+                    </section>
+                
+                    <section class="container">
+                      <div class="col-sm-12 col-md-12 pt-5">
+                        <p class="text-light font-size__acercaDe__description textoAcercaDe">
+                          Los expertos de RollingMed resuelven los problemas médicos más difíciles del mundo, un paciente a la vez.
+                          Independientemente del problema de salud grave, complejo o poco frecuente que enfrentes, puedes tener la
+                          certeza de que RollingMed tiene una gran experiencia en el tratamiento de pacientes con tu afección
+                          específica.
+                        </p>
+                      </div>
+                      <div>
+                        <p class="text-light col-sm-12 col-md-12 textoAcercaDe">
+                          Nuestra investigación incesable produce descubrimientos científicos e innovaciones que llegan a nuestros
+                          pacientes más rápido y les ayudan a recuperarse antes. Con frecuencia, nuestros pacientes se encuentran entre
+                          los primeros en beneficiarse de terapias innovadoras, tecnologías avanzadas y ensayos de investigación
+                          clínica.
+                        </p>
+                      </div>
+                
+                      <div class="Imagen_central mt-4">
+                        <figure >
+                          <img src="./img/doctora.img.webp" alt="imagen de una doctora y paciente" id="Foto_doctora">
+                          <div class="capa">
+                            <h3>En RollingMed</h3>
+                            <p>"puedes tener la certeza de que hay gran experiencia en el tratamiento de pacientes con tu afección
+                              específica."</p>
+                          </div>
+                        </figure>
+                    </section>
+                
+                
+                
+                
+                    <section>
+                      <article class="container">
+                        <div class="col-sm-12 col-md-12 mt-5 text-light my-5 text-center">
+                          <h2 class="display-2 fontFamily__acercaDe text-center">
+                            Nuestro Equipo
+                          </h2>
+                        </div>
+                        <div class="row border-top">
+                 
+                          <div class="d-flex justify-content-center flex-wrap pt-5">
+                            <div class="col-sm-12 col-md-4 col-lg-4 my-3 text-center cardAcercaDe">
+                              <div>
+                                <img src="./img/LuisFoto.img.jpg" alt="Foto integrante del equipo" class="imagenIntegrantes" />
+                                <p class="col-sm-12 col-md-12 text-light mt-5 display-6 fontFamily__acercaDe NombresIntegrantes">
+                                  Luis Aramayo
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4 col-lg-4 my-3 text-center cardAcercaDe">
+                              <div>
+                                <img src="./img/fabiFoto.img.png" alt="Foto integrante del equipo" class="imagenIntegrantes" />
+                                <p class="col-sm-12 col-md-12 text-light mt-5 display-6 fontFamily__acercaDe NombresIntegrantes">
+                                  Fabiana Ibáñez
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4 col-lg-4 my-3 text-center cardAcercaDe">
+                              <div>
+                                <img src="./img/estebanFoto.img.jpeg" alt="Foto integrante del equipo" class="imagenIntegrantes" />
+                                <p class="col-sm-12 col-md-12 text-light mt-5 display-6 fontFamily__acercaDe NombresIntegrantes">
+                                  Esteban Arborio
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       </div>
+                     </article>
+                    </section>
+                  </section>
+            </section>
+            
+          </div>
+        
     </main>
 
 
@@ -200,11 +395,11 @@
         </footer>
 
         <!-- JavaScript Bundle with Popper -->
-        <!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-            crossorigin="anonymous"></script-->
+            crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> -->
         <script src="./js/login.js"></script>
 </body>
 
