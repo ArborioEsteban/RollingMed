@@ -21,19 +21,8 @@
 
     <main class="container my-2">
 
-      <div class="row">
-        <div class="col-6 text-center margin-auto">
-
-            <a href="./adminUsuarios.html" class=" my-3 text-decoration-none text-white w-75 btn-grad botonTarea fs-4" type="button">Admin Usuarios</a>
-        </div>
-        <div class="col-6 text-center margin-auto">
-            <a href="./adminPrincipal.html" class=" my-3 text-decoration-none text-white w-75 btn-grad botonTarea fs-4" type="button">Admin Principal</a>
-
-        </div>
-
-        <hr/>
-      </div>
       
+
       <section class="my-4">
         <h1>Cargar Turno</h1>
         <hr />
@@ -95,11 +84,24 @@
             </form>
           </section>
           <hr />
+
+          <div class="row">
+            <div class="col-6 text-center margin-auto">
+    
+                <a href="./adminUsuarios.html" class=" my-3 text-decoration-none text-white w-75 btn-grad botonTarea fs-4" type="button">Admin Usuarios</a>
+            </div>
+            <div class="col-6 text-center margin-auto">
+                <a href="./adminPrincipal.html" class=" my-3 text-decoration-none text-white w-75 btn-grad botonTarea fs-4" type="button">Admin Principal</a>
+    
+            </div>
+    
+            <hr/>
+          </div>
           
 
           
           
-          <table class="table 
+          <!-- <table class="table 
           ">
             <thead>
               <tr class="bg-table-turno text-white">
@@ -114,7 +116,28 @@
             <tbody id="tbody__turno" class="bg-light text-dark ">
               
             </tbody>
-          </table>
+          </table> -->
+
+          <div id="divUsuariosCargados" class="mt-0 pt-3">
+            <div class="container">
+              <h3 class="text-dark">Usuarios Cargados</h3>
+              <section>
+                <table class="table text-center">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="fs-4">Codigo</th>
+                      <th scope="col" class="fs-4">Medico</th>
+                      <th scope="col" class="fs-4">Paciente</th>
+                      <th scope="col" class="fs-4">Dia</th>
+                      <th scope="col" class="fs-4">Hora</th>
+                      <th scope="col" class="fs-4">Editar / Eliminar</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody__turno" class="bg-transparent"></tbody>
+                </table>
+              </section>
+            </div>
+          </div>
 
           
 

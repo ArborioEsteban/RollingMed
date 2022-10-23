@@ -10,9 +10,7 @@
   background-attachment: fixed;
 }
 
-.bg-table-turno{
-  background-color: #0099FF ;
-}
+
 
 .btn-grad {
   background-image: linear-gradient(
@@ -47,4 +45,12 @@
   background: transparent;
   outline: none;
   border: 0;
+}
+
+#divUsuariosCargados{
+  background-color: #0099ff7e
+}
+
+#navNuestro1{
+  background-color: #0099ff;
 }

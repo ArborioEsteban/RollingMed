@@ -19,15 +19,15 @@
     <link rel="stylesheet" href="./css/rollingMed.css">
     <title>CRUD Usuarios</title>
   </head>
-  <body class="bg-med">
+  <body id="bodyUsuarios" class="bg-med">
     <header></header>
     <main>
         
-        <div id="divForm" class="container pt-5">
-            <div class="row col-xl-12 col-sm-12">
+        <div id="divForm" class="container mt-5">
+            <div class="row col-xl-6 col-sm-12">
       <section>
         <h1>Cargar Usuario</h1>
-        <hr />
+        <!-- <hr /> -->
       </section>
       <section>
         <form id="formAdmin">
@@ -92,6 +92,7 @@
 
     </div>
     </div>
+
     <div class="container">
 
       <div class="row">
@@ -108,28 +109,26 @@
     </div>
     </div>
 
-    <div class="bg-transparent text-dark mt-2">
-    <div  class="container" >
-      <section id="Section2" class="bg-transparent">
-        <h3>Usuarios cargados</h3>
-      </section>
-      <section>
-        <table class="table ">
-          <thead>
-            <tr tr class="bg-table-turno text-light">
-              <th class="fs-3" scope="col">#</th>
-              <th class="fs-3" scope="col">Nombre</th>
-              <th class="fs-3" scope="col">Apellido</th>
-              <th class="fs-3" scope="col">Edad</th>
-              <th class="fs-3" scope="col">Nota</th>
-              <th class="fs-3 text-left" scope="col">Acciones</th>
-            </tr>
-          </thead>
-          <tbody id="tbodyAdmin" class="bg-light text-dark"></tbody>
-        </table>
-      </section>
+    <div id="divUsuariosCargados" class="mt-0 pt-3">
+      <div class="container">
+        <h3 class="text-dark">Usuarios Cargados</h3>
+        <section>
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th class="text-dark fs-4" scope="col">Codigo</th>
+                <th class="text-dark fs-4" scope="col">Nombre</th>
+                <th class="text-dark fs-4" scope="col">Apellido</th>
+                <th class="text-dark fs-4" scope="col">Edad</th>
+                <th class="text-dark fs-4" scope="col">Nota</th>
+                <th class="text-dark fs-4" scope="col">Editar/Eliminar</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyAdmin" class="bg-transparent text-center"></tbody>
+          </table>
+        </section>
+      </div>
     </div>
-  </div>
     </main>
     <footer></footer>
     <!-- JavaScript Bundle with Popper -->

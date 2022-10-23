@@ -20,3 +20,14 @@
 #tbodyAdmin{
     background-color: #0099ff
 }
+
+#divUsuariosCargados{
+    background-color: #0099ffa1
+}
+#logo img {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+  }
+

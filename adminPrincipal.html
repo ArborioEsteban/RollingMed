@@ -18,9 +18,24 @@
     <link rel="stylesheet" href="./css/rollingMed.css">
 </head>
 <body class="bg-med">
-    <main class="container my-2">
-        <div class="row">
-            <div class="col-6 text-center margin-auto">
+
+  <div id="navNuestro1" class="container-fluid">
+
+    <a href="./index.html" id="logo"><img src="./src/LogorollingmedAdmin.img" alt="Logo RollingMed" class="img-fluid"/></a>
+  </div>
+    <main class="container">
+        
+
+        <section class="bg-transparent container text-dark rounded text-center">
+
+          <form id="formBusqueda" class="d-flex justify-content-center mt-3">
+              <select class="form-select w-50" aria-label="listaMedicosDesplegable" id="listaMedicos" placeholder="Buscar Medico "required></select>
+              <select class="form-select w-50 ms-2" aria-label="listaPacientesDesplegable" id="listaPacientes" placeholder="Buscar Pacientes" required></select>
+              <button type="submit" class="btn btn-grad botonTarea text-white ms-3 my-2 fs-6">Buscar</button>
+          </form>
+
+          <div class="row mt-5">
+            <div class="col-6 text-center margin-auto ">
 
                 <a href="./adminUsuarios.html" class=" my-3 text-decoration-none text-white w-75 btn-grad botonTarea fs-4" type="button">Admin Usuarios</a>
             </div>
@@ -32,19 +47,12 @@
             <hr/>
         </div>
 
-        <section class="bg-transparent container text-dark py-3 rounded text-center">
-
-          <form id="formBusqueda" class="d-flex justify-content-center ">
-              <select class="form-select w-50" aria-label="listaMedicosDesplegable" id="listaMedicos" placeholder="Buscar Medico "required></select>
-              <select class="form-select w-50" aria-label="listaPacientesDesplegable" id="listaPacientes" placeholder="Buscar Pacientes" required></select>
-              <button type="submit" class="btn btn-grad botonTarea text-white ms-3 my-2 fs-6">Buscar</button>
-          </form>
-
         
-            
+          <div id="divUsuariosCargados" class="mt-5 pt-3">
+
             <table class="table mt-4">
               <thead>
-                <tr class="bg-table-turno text-white">
+                <tr>
                   <th scope="col" class="fs-2">Medico</th>
                   <th scope="col" class="fs-2">Paciente</th>
                   <th scope="col" class="fs-2">Dia</th>
@@ -52,10 +60,11 @@
                   <th scope="col" class="fs-2">Notas</th>
                 </tr>
               </thead>
-              <tbody id="tbody__tablaPrincipal" class="bg-light text-dark ">
+              <tbody id="tbody__tablaPrincipal" class="bg-transparent">
                 
               </tbody>
             </table>
+          </div>
           </section>
           <hr />
     </main>

@@ -31,7 +31,7 @@ formLogin.addEventListener("submit", (e)=>{
     let pass = "roll";
     if(passwordAdmin.value === pass){
         passwordAdmin.classList = "form-control is-valid";
-        window.open("./adminTurnos.html","_self");
+        window.open("./adminPrincipal.html","_self");
     }else{
         passwordAdmin.classList = "form-control is-invalid";
     }
