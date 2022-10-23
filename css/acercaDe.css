@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+* {
+  font-family: "Mouse Memoirs";
+}
+
 
 /* ----------acercaDe------------ */
 
@@ -10,10 +14,7 @@
   background-attachment: fixed;
 }
 
-.fontFamily__acercaDe {
-  font-family: "Roboto", sans-serif;
-  display: flex;
-}
+
 
 .imagenIntegrantes {
   width: 12rem;
@@ -31,8 +32,14 @@
   font-family: "Merriweather", serif;
 }
 
+.textoAcercaDe{
+  font-size: 200%;
+
+}
+
 #Foto_doctora {
   max-width: 100%;
+  margin-top: 6rem;
   height:auto;
   border-radius: 5%;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
@@ -45,12 +52,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .Imagen_central figure {
   position: relative;
   height: 800px;
-  width: 1000px;
+  width: 80%;
   overflow: hidden;
   border-radius: 50px;
   box-shadow: 0px 15px 25px (gba 0, 0, 0, 0.5);
@@ -106,7 +113,7 @@
 @media screen and (max-width:990px){
 
   .fontFamily__acercaDe {
-    font-family: "Roboto", sans-serif;
+    
     display: flex;
     justify-content: center;
   }
@@ -183,9 +190,11 @@
   }
 
 
+
+
   .font_frase {
     font-size:small;
-    font-family: "Merriweather", serif;
+   
   }
 
 
@@ -194,7 +203,7 @@
 @media screen and (max-width:768px){
 
   .fontFamily__acercaDe {
-    font-family: "Roboto", sans-serif;
+
     display: flex;
     justify-content: center;
   }
@@ -273,7 +282,7 @@
 
   .font_frase {
     font-size:small;
-    font-family: "Merriweather", serif;
+   
   }
 
 
@@ -282,10 +291,20 @@
 @media screen and (max-width:360px){
 
   .fontFamily__acercaDe {
-    font-family: "Roboto", sans-serif;
+   
     display: flex;
     justify-content: center;
   }
 }
 
 /* Fin del estilo de imagen central con efecto hover*/
+
+
+@media screen and (max-width:575px){
+
+  .cardAcercaDe {
+    width: 100%;
+  }
+
+}
+

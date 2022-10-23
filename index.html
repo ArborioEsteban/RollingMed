@@ -34,7 +34,7 @@
             <span><a href="./error.html"><i class="fa fa-phone"></i> +54 0381 524545</a></span>
         </section>
         <section class="nav2">
-            <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-lock"></i>Admin</a></span>
+            <a class="me-2" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-lock me-3"></i>Admin</a></span>
             <!-- Modal para login -->
             <div class="modal fade bg-med" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
                 aria-hidden="true">
@@ -70,15 +70,23 @@
     </header>
 
     <!--NAVIGATION-->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myTopnav">
+    <nav class="navbar navbar-expand-sm" id="navNuestro">
+        <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#myTopnav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="topnav collapse navbar-collapse" id="myTopnav">
-            <a href="./error.html" id="logo"><img src="./img/Logorollingmed.img.png" alt="Logo RollingMed" /></a>
-            <a href="./error.html" id="active">Bienvenidos</a>
-            <a href="./acercaDe.html" id="nosotros">Nosotros</a>
-            <a href="./contacto.html" id="nosotros">Contacto</a>
+        <div class="topnav collapse navbar-collapse mt-3" id="myTopnav">
+            <a href="./error.html" id="logo" class="navbar-brand"><img src="./img/Logorollingmed.img.png" alt="Logo RollingMed" /></a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="./error.html" id="active">Bienvenidos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./acercaDe.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./contacto.html">Contacto</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -116,7 +124,7 @@
                     <div class="row mt-3">
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <h6 class="text-uppercase fw-bold colores">Rolling Med</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; height: 2px">
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto" class="width: 60px; height: 2px">
                             <p>
                                 Los millones de pacientes a quienes brindamos tratamiento cada año nos preparan para
                                 tratar la persona que más importa: tú.
@@ -130,7 +138,7 @@
                             <!-- Links -->
                             <h6 class="text-uppercase fw-bold colores">Servicios</h6>
 
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; height: 2px">
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto" class="width: 60px; height: 2px">
                             <p>
                                 <a href="./error.html" class="text-white">Emergencias</a>
                             </p>
@@ -150,7 +158,7 @@
                         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                             <!-- Links -->
                             <h6 class="text-uppercase fw-bold colores">Profesionales</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; height: 2px">
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto" class="width: 60px; height: 2px">
                             <p>
                                 <a href="./error.html" class="text-white">Encuentra un médico</a>
                             </p>
@@ -184,7 +192,7 @@
 
 
             <!-- Copyright -->
-            <div class="text-center p-3" class="background-color:black ">
+            <div class="text-center p-3 bg-black">
                 © 2022 Copyright:
                 <a class="text-white" href="https://mdbootstrap.com/">Todos los derechos reservados.</a>
             </div>

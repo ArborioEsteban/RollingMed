@@ -1,4 +1,7 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+* {
+  font-family: "Mouse Memoirs";
+}
 
 body{
 
@@ -6,12 +9,13 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
-    font-family: roboto, sans-serif;
+
 
 
 }
 img{
     width: 50%;
+    border-radius: 10%;
 }
 .container{
     height:100vh ;
@@ -24,17 +28,20 @@ img{
 
 h1{
     color: rgba(9, 8, 8, 0.814);
-    font-size: 20px;
+    font-size: 35px;
     padding: 20px;
 
 
 }
 button{
-    padding: 15px 30px;
+    padding: 20px 30px;
     border-radius: 15px;
-    border: none;
+    border:none;
     color:rgba(18, 76, 191, 0.674);
-    font-family: roboto,sans-serif;
+    font-size:larger;
+    font-weight: 800;
+   
+
 
   
 
@@ -44,8 +51,14 @@ button{
     h1{
        
         font-size: 16px;
-
-    
+        text-align: center;
     }
+  
+}
+@media screen and (max-width:632px){
+   
 
+    h1{
+        text-align: center;
+    }
 }

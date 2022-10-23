@@ -68,7 +68,7 @@ header {
 header section {
   width: 100%;
   padding: 0.5rem 2rem;
-  font-size: 14px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,8 +120,8 @@ header .btn1 {
 
 /*NAVIGATION*/
 .topnav {
-  overflow: hidden;
-  background-color: #230a59;
+  /* overflow: hidden; */
+  /* background-color: #230a59; */
 }
 
 .topnav a {
@@ -131,18 +131,15 @@ header .btn1 {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 40px;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-#logo {
-  float: left;
-}
+
 
 #active {
   color: hsl(168, 75%, 55%);
-  padding: 40px;
 }
 
 .topnav a:hover,
@@ -178,7 +175,7 @@ header .btn1 {
   text-decoration: none;
   font-size: 16px;
   text-transform: uppercase;
-  font-weight: 600;
+
 }
 
 #navbar a:hover {
@@ -197,22 +194,66 @@ header .btn1 {
 }
 
 #logo img {
-  width: 80%;
-  height: 70%;
-  display: flex;
-}
-
-#contact {
-  padding: 40px;
-}
-#nosotros {
-  padding: 40px;
-}
-
-.img_central{
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   position: relative;
   object-fit: cover;
 }
+
+
+.img_central{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+}
+
+#navNuestro{
+  background-color: #230a59;
+}
+
+h6{
+  font-size: 200%;
+
+ 
+
+}
+
+@media screen and (max-width:800px){
+
+  #logo img{
+    display: none;
+
+
+  }
+  #active {
+ text-align: center;
+  }
+
+}
+
+.navbar-toggler-icon{
+  background-color: whitesmoke;
+}
+.navbar-toggler{
+  background-color: whitesmoke;
+}
+
+.footer_bg{
+  background-color: #000;
+}
+
+
+/* @media screen and (max-width:539px){
+
+  #nosotros #contact{
+
+    display: flex;
+    flex-direction: column;
+ 
+ 
+
+
+  }
+} */
 
