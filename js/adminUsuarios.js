@@ -1,4 +1,4 @@
-import { crearUsuarioTabla } from "./usuario.CreacionTabla.js";
+import { crearUsuarioTabla } from "./usuarioCreacionTabla.js";
 import { Usuario } from "./usuarioClass.js";
 import {
   validarApellido,

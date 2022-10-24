@@ -3,38 +3,65 @@
   font-family: "Mouse Memoirs";
 }
 
-#bodyUsuarios{
-    background-image: url("../src/medical-physician-doctor-man.jpg");
-      background-size: cover;
-    background-repeat: no-repeat;
+.bg-med {
+  background-image: url("../src/medicoBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-#divForm{
-    position: relative
-    
+.bg-table-turno{
+  background-color: #0099FF ;
 }
+
 
 #buttonLogin{
-    background-color: #0099FF
-    
+outline: none;
+border: 0;
+background-image: linear-gradient(
+    to right,
+    #0000ff 0%,
+    #00e6ff 51%,
+    #4400db 100%
+  );
+  padding: 9px 20px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
+}
+
+#buttonTurnos{
+    outline: none;
+border: 0;
+background-image: linear-gradient(
+    to right,
+    #0000ff 0%,
+    #00e6ff 51%,
+    #4400db 100%
+  );
+  padding: 12px 24px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
+  margin: 0;
 }
 
 #divUsuariosCargados{
-    position: relative;
-    z-index: 200;
-}
-
-#divUsuariosCargados{
-    background-color: #0099ff7e
+    background-color: #0099ff5b;
 }
 
 .botonDelete{
-    background: transparent;
-    outline: none;
-    border: 0;
-    padding: auto;
-    margin-right: auto
+  background: transparent;
+  outline: none;
+  border: 0;
+  padding: auto;
+  margin-right: auto;
 }
 
 .botonEdit{
@@ -44,5 +71,3 @@
     margin: auto;
     padding: 0;
 }
-
-
