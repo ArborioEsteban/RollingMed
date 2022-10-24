@@ -10,11 +10,11 @@ const formBusquedaMedico =document.getElementById("formBusquedaMedico");
 turnosLS.sort((a, b) => {
 
   let ah = a.fecha +"T"+ a.hora;
-  console.log(ah);
+  
   
 
   let bh = b.fecha +"T"+ b.hora;
-  console.log(bh);
+  
   
 
   if (ah > bh ) {
@@ -28,10 +28,6 @@ turnosLS.sort((a, b) => {
   return 0;
 });
 
-
-
-console.log(turnosLS);
-console.log(listaPacientesLS);
 
 let listaPacientes = document.getElementById("listaPacientes");
 const optionDefaultPaciente = document.createElement("option");
