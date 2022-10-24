@@ -27,6 +27,7 @@ export const deleteUsuario = (codigo) => {
         title: "Eliminado",
         text: "El usuario ha sido eliminado",
         icon: "success",
+        confirmButtonColor: "#0099FF"
       });
       formUsuario.reset();
       campoApellido.classList = "form-control";

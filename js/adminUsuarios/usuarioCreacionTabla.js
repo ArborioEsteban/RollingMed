@@ -1,6 +1,7 @@
 import { cargarDatosEnForm } from "./usuarioActualizar.js";
 import { deleteUsuario } from "./usuarioEliminar.js";
 
+
 export const crearUsuarioTabla = (usuario) => {
   const tbody = document.getElementById("tbodyAdmin");
 
