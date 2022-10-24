@@ -38,4 +38,16 @@
   text-decoration: none;
 }
 
+.botonTarea{
+  /* background: transparent; */
+  outline: none;
+  border: 0;
+}
+
+.botonEditDelete{
+  background: transparent;
+  outline: none;
+  border: 0;
+}
+
 
