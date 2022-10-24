@@ -10,50 +10,55 @@
   background-attachment: fixed;
 }
 
-.bg-contacto {
-  background-image: url("../src/laboratorio1.img.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.bg-acercaDe{
-  background: linear-gradient(rgba(4, 3, 20, 0.833), rgba(4, 3, 20, 0.833)),
-    url("../img/laboratorio1.img.png");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-
-
-
-
-.btn-grad {
-  background-image: linear-gradient(
+#buttonCargar{
+  outline: none;
+border: 0;
+background-image: linear-gradient(
     to right,
-    #5610ec 0%,
-    #370f90 51%,
-    #230a59 100%
+    #0000ff 0%,
+    #00e6ff 51%,
+    #4400db 100%
   );
-  margin: 5px;
-  padding: 15px 35px;
+  padding: 9px 20px;
   text-align: center;
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
+  box-shadow: 0 0 10px #eee;
   border-radius: 10px;
 }
 
+#buttonUsuarios{
+  outline: none;
+  border: 0;
+  background-image: linear-gradient(
+      to right,
+      #0000ff 0%,
+      #00e6ff 51%,
+      #4400db 100%
+    );
+    padding: 12px 24px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 10px #eee;
+    border-radius: 10px;
+    margin: 0;
+}
+
+#divTurnosCargados{
+  background-color: #0099ff5b;
+}
+
+
 .btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
 
 .botonTarea{
-  /* background: transparent; */
   outline: none;
   border: 0;
 }
@@ -64,10 +69,3 @@
   border: 0;
 }
 
-#divUsuariosCargados{
-  background-color: #0099ff7e
-}
-
-#navNuestro1{
-  background-color: #0099ff85;
-}

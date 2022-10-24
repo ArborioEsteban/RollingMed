@@ -1,33 +1,73 @@
-#imagenLogin{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+* {
+  font-family: "Mouse Memoirs";
 }
 
-#divForm{
-    position: relative
+.bg-med {
+  background-image: url("../src/medicoBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+.bg-table-turno{
+  background-color: #0099FF ;
+}
+
 
 #buttonLogin{
-    background-color: #0099FF
+outline: none;
+border: 0;
+background-image: linear-gradient(
+    to right,
+    #0000ff 0%,
+    #00e6ff 51%,
+    #4400db 100%
+  );
+  padding: 9px 20px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
 }
 
-/* #Section2{
-    position: relative;
-} */
-
-#tbodyAdmin{
-    background-color: #0099ff
+#buttonTurnos{
+outline: none;
+border: 0;
+background-image: linear-gradient(
+    to right,
+    #0000ff 0%,
+    #00e6ff 51%,
+    #4400db 100%
+  );
+  padding: 12px 24px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
+  margin: 0;
 }
 
 #divUsuariosCargados{
-    background-color: #0099ffa1
+    background-color: #0099ff5b;
 }
-#logo img {
-    width: 50%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-  }
 
+.botonDelete{
+  background: transparent;
+  outline: none;
+  border: 0;
+  padding: auto;
+  margin-right: auto;
+}
+
+.botonEdit{
+    background: transparent;
+    outline: none;
+    border: 0;
+    margin: auto;
+    padding: 0;
+}

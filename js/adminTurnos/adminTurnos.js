@@ -146,7 +146,7 @@ formTurnos.addEventListener("submit", (e) => {
       horaT = horario.value;
 
       // agregamos el contacto
-      const turno = new Turno(paciente, medico, fechaT, horaT);
+      const turno = new Turno (paciente, medico, fechaT, horaT);
       turnosArray.unshift(turno);
       const turnosJSON = JSON.stringify(turnosArray);
       localStorage.setItem("turnos", turnosJSON);
