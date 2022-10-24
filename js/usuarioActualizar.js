@@ -2,16 +2,20 @@ let campoNombre = document.getElementById("nombreUsuario");
 let campoApellido = document.getElementById("ApellidoUsuario");
 let campoFechaNacimiento = document.getElementById("fechaNacimientoUsuario");
 let campoNotas = document.getElementById("notasUSuario");
+let buttoncargar = document.getElementById("buttonLogin");
 
-export const cargarDatosEnForm = (codigo) =>{
-    const usuarios = JSON.parse(localStorage.getItem("usuarios"))
+export const cargarDatosEnForm = (codigo) => {
+  const usuarios = JSON.parse(localStorage.getItem("usuarios"));
 
-    const usuariosAModificar = usuarios.find((elemento)=>{
-        return elemento.codigo === codigo
-    })
+  const usuariosAModificar = usuarios.find((elemento) => {
+    return elemento.codigo === codigo;
+  });
 
-    campoNombre.value = usuariosAModificar.nombre;
-    campoApellido.value = usuariosAModificar.apellido;
-    campoFechaNacimiento.value = usuariosAModificar.fechaNacimiento;
-    campoNotas.value = usuariosAModificar.notas;
-}
+  campoNombre.value = usuariosAModificar.nombre;
+  campoApellido.value = usuariosAModificar.apellido;
+  campoFechaNacimiento.value = usuariosAModificar.fechaNacimiento;
+  campoNotas.value = usuariosAModificar.notas;
+
+  buttoncargar.innerText = "Actualizar";
+  sessionStorage.setItem("codigoEdicion", codigo);
+};

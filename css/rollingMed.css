@@ -27,18 +27,15 @@
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
 }
 
 .btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
 
 .botonTarea{
-  /* background: transparent; */
   outline: none;
   border: 0;
 }
@@ -48,3 +45,4 @@
   outline: none;
   border: 0;
 }
+
