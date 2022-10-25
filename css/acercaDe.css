@@ -39,7 +39,7 @@
 
 #Foto_doctora {
   max-width: 100%;
-  margin-top: 6rem;
+  /* margin-top: 6rem; */
   height:auto;
   border-radius: 5%;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
