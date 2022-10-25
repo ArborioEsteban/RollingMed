@@ -1,84 +1,87 @@
-const formularioContacto = document.getElementById('formularioContacto');
-const inputs = document.querySelectorAll('#formularioContacto input');
+import { validarApellido, validarEmail, validarNombre, validarTelefono } from "./adminUsuarios/usuarioValidators.js"
 
-const expresiones = {
-    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefono: /^\d{7,14}$/ // 7 a 14 numeros.
-}
+let nombreContacto = ""
+let apellidoContacto = ""
+let emailContacto = ""
+let telefonoContacto = 0
+let mensajeContacto =""
 
-const campos = {
-    nombre: false,
-    apellido: false,
-    mail: false,
-    telefono: false,
-}
+let campoNombreContacto = document.getElementById("nombreContacto")
+let campoApellidoContacto = document.getElementById("apellidoContacto")
+let campoEmailContacto = document.getElementById("emailContacto")
+let campoTelefonoContacto = document.getElementById("telefonoContacto")
+let campoMensajeContacto = document.getElementById("notasContacto")
+let formContacto = document.getElementById("formularioContacto")
 
-const validarCampo = (expresion, input, campo) => {
-    if (expresion.test(input.value)) {
-        document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
-        document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
-        document.querySelector(`#grupo__${campo} i`).classList.add('fa-circle-check');
-        document.querySelector(`#grupo__${campo} i`).classList.remove('fa-circle-xmark');
-        document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
-        campos[campo] = true;
-    } else {
-        document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
-        document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
-        document.querySelector(`#grupo__${campo} i`).classList.add('fa-circle-xmark');
-        document.querySelector(`#grupo__${campo} i`).classList.remove('fa-circle-check');
-        document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
-        campos[campo] = false;
+//VALIDADORES 
+
+export const validarMensaje = (valor, campo) => {
+        if (valor.trim().length < 5) {
+          campo.classList = "form-control is-invalid";
+          return false;
+        } else{
+         campo.classList = "form-control is-valid"
+         return true
+        }
     }
-}
+        
 
-const validarFormulario = (e) => {
-    switch (e.target.name) {
-        case "nombreContacto":
-            validarCampo(expresiones.nombre, e.target, 'nombre');
-            break;
-        case "apellidoContacto":
-            validarCampo(expresiones.apellido, e.target, 'apellido');
-            break;
-        case "mailContacto":
-            validarCampo(expresiones.mail, e.target, 'mail');
-            break;
-        case "telefonoContacto":
-            validarCampo(expresiones.telefono, e.target, 'telefono');
-            break;
-    }
-}
+      campoNombreContacto.addEventListener("blur",(e)=>{
+        if(validarNombre(e.target.value,campoNombreContacto)){
+            nombreContacto=e.target.value;
+        }
+      })
 
-inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
-});
+      campoApellidoContacto.addEventListener("blur",(e)=>{
+        if(validarApellido(e.target.value,campoApellidoContacto)){
+            apellidoContacto=e.target.value;
+        }
+      })
 
-formularioContacto.addEventListener('submit', (e) => {
-    e.preventDefault();
+      campoEmailContacto.addEventListener("blur",(e)=>{
+        if(validarEmail(e.target.value,campoEmailContacto)){
+            emailContacto=e.target.value;
+        }
+      })
 
-    const terminos = document.getElementById('terminos');
-    if (campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked) {
-        formularioContacto.reset();
+      campoTelefonoContacto.addEventListener("blur",(e)=>{
+        if(validarTelefono(e.target.value,campoTelefonoContacto)){
+            telefonoContacto=e.target.value;
+        }
+      })
 
-        document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-        setTimeout(() => {
-            document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-        }, 5000);
+      campoMensajeContacto.addEventListener ("blur",(e)=>{
+        if(validarMensaje(e.target.value,campoMensajeContacto)){
+            mensajeContacto=e.target.value;
+        }
+      })
 
-        document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-            icono.classList.remove('formulario__grupo-correcto');
-        });
-    } else {
-        document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-    }
-});
+      formContacto.addEventListener("submit",(e)=>{
+        e.preventDefault();
 
+        if(validarNombre(nombreContacto,campoNombreContacto) &&
+            validarApellido(apellidoContacto,campoApellidoContacto) &&
+            validarEmail(emailContacto,campoEmailContacto) &&
+            validarTelefono(telefonoContacto,campoTelefonoContacto) &&
+            validarMensaje(mensajeContacto,campoMensajeContacto)){
+                Swal.fire("Exito!", "Nos contactaremos a la brevedad!", "success");
+                
+                      campoNombreContacto.value = "";
+                      campoApellidoContacto.value = "";
+                      campoEmailContacto.value = "";
+                      campoTelefonoContacto.value = "";
+                      campoMensajeContacto.value = ""; 
+                      
 
-     
-    // inputs.forEach((input) => {
-    //     input.addEventListener('keyup', validarFormulario);
-    //     input.addEventListener('blur', validarFormulario);
-    // });
+            } else{
+                Swal.fire("Error!", "Verifique los campos", "error");
+            }
+            formContacto.reset();
+            campoNombreContacto.classList += "form-control";
+            campoApellidoContacto.classList += "form-control"; 
+            campoEmailContacto.classList += "form-control";
+            campoTelefonoContacto.classList += "form-control";
+            campoMensajeContacto.classList += "form-control";
+                    
+      })
 
