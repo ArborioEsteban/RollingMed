@@ -14,8 +14,31 @@
   background-color: #0099FF ;
 }
 
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #5610ec 0%,
+    #370f90 51%,
+    #230a59 100%
+  );
+  margin: 5px;
+  padding: 15px 35px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
 
-#buttonLogin{
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* #buttonLogin{
 outline: none;
 border: 0;
 background-image: linear-gradient(
@@ -50,7 +73,7 @@ background-image: linear-gradient(
   box-shadow: 0 0 10px #eee;
   border-radius: 10px;
   margin: 0;
-}
+} */
 
 #divUsuariosCargados{
     background-color: #0099ff5b;

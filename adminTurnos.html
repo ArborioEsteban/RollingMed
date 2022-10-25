@@ -21,56 +21,50 @@
     <link rel="stylesheet" href="./css/rollingMed.css" />
   </head>
   <body class="bg-med">
-    <main >
-      <section class="container my-2">
-      <section class="row col-lg-6 col-md-7 col-sm-12 bg-transparent container text-dark py-3 rounded">
-        <section>
-          <h2>Turnos</h2>
-          <hr />
-        </section>
+    <main class="container my-2">
+      <section class="my-4 d-flex justify-content-center">
+        <hr />
+        <div class="row col-xl-6 col-sm-12 ">
+          <h1>Cargar Turno</h1>
+          <hr/>
+          <section class="bg-transparent container text-dark py-3 rounded ">
+            <form id="formTurnos" class="">
 
-        <form class="" id="formTurnos">
-          <div class="mb-3">
-            <label for="listaPacientes" class="form-label">Paciente</label>
+              <div class="mb-3">
+                <label for="listaPacientes" class="form-label">Paciente</label>
+                
+                <select class="form-select" aria-label="listaPacientes" id="listaPacientes" required>
+                  
+                </select>
+                <div id="listaPacientes__feedback" class="invalid-feedback">
+                  Seleccione un Paciente
+                </div>
+              </div>
 
-            <select
-              class="form-select"
-              aria-label="listaPacientes"
-              id="listaPacientes"
-              required
-            ></select>
-            <div id="listaPacientes__feedback" class="invalid-feedback">
-              Seleccione un Paciente
-            </div>
-          </div>
+              <div class="mb-3">
+                <label for="listaMedicos" class="form-label">Medico</label>
+                <select class="form-select" aria-label="listaMedicosDesplegable" id="listaMedicos" required></select>
+                <div id="listaMedicos__feedback" class="invalid-feedback">
+                  Seleccione un Medico
+                </div>
+              </div>
 
-          <div class="mb-3">
-            <label for="listaMedicos" class="form-label">Medico</label>
-            <select
-              class="form-select"
-              aria-label="listaMedicosDesplegable"
-              id="listaMedicos"
-              required
-            ></select>
-            <div id="listaMedicos__feedback" class="invalid-feedback">
-              Seleccione un Medico
-            </div>
-          </div>
+              <!-- onkeydown="return false" -->
 
-          <!-- onkeydown="return false" -->
-
-          <div class="mb-3">
-            <label for="diaTurno" class="form-label">Fecha del Turno</label>
-            <input
-              type="date"
-              class="form-control required"
-              id="diaTurno"
-              required
-            />
-            <div id="diaTurno__feedback" class="invalid-feedback">
-              No es posible asignar el turno en ese dia
-            </div>
-          </div>
+              <div class="mb-3">
+                <label for="diaTurno" class="form-label">Fecha del Turno</label>
+                <input
+                  type="date"
+                  class="form-control required"
+                  id="diaTurno"
+                  
+                  required
+                  
+                />
+                <div id="diaTurno__feedback" class="invalid-feedback">
+                  No es posible asignar el turno en ese dia
+                </div>
+              </div>
 
               <div class="mb-3">
 
@@ -107,19 +101,19 @@
     
             <hr/>
           
-          <div id="divUsuariosCargados" class="mt-0 pt-3">
+          <div id="divTurnosCargados" class="mt-0 pt-3">
             <div class="container">
               <h3 class="text-dark">Usuarios Cargados</h3>
               <section class="my-4 d-flex justify-content-center">
                 <table class="table text-center">
                   <thead>
                     <tr>
-                      <th scope="col" class="fs-4">#</th>
-                      <th scope="col" class="fs-4">Medico</th>
-                      <th scope="col" class="fs-4">Paciente</th>
-                      <th scope="col" class="fs-4">Dia</th>
-                      <th scope="col" class="fs-4">Hora</th>
-                      <th scope="col" class="fs-4">Editar/Eliminar</th>
+                      <th scope="col" class="fs-3">#</th>
+                      <th scope="col" class="fs-3">Medico</th>
+                      <th scope="col" class="fs-3">Paciente</th>
+                      <th scope="col" class="fs-3">Dia</th>
+                      <th scope="col" class="fs-3">Hora</th>
+                      <th scope="col" class="fs-3">Editar/Eliminar</th>
                     </tr>
                   </thead>
                   <tbody id="tbody__turno" class="bg-transparent"></tbody>
@@ -128,6 +122,7 @@
             </div>
           </div>
     </main>
+    
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
