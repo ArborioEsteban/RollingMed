@@ -4,13 +4,63 @@
 }
 
 .bg-med {
-  background-image: url("../src/medicoBackground.jpg");
+  background-image: url("../src/laboratorio1.img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.bg-med {
+  background-image: url("../src/laboratorio1.img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-#buttonCargar{
+.bg-contacto {
+  background-image: url("../src/laboratorio1.img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-acercaDe{
+  background: linear-gradient(rgba(4, 3, 20, 0.833), rgba(4, 3, 20, 0.833)),
+    url("../img/laboratorio1.img.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #5610ec 0%,
+    #370f90 51%,
+    #230a59 100%
+  );
+  margin: 5px;
+  padding: 15px 35px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-accordion{
+  outline: none;
+  border: 0;
+
+}
+
+/* #buttonCargar{
   outline: none;
 border: 0;
 background-image: linear-gradient(
@@ -26,7 +76,7 @@ background-image: linear-gradient(
   color: white;
   box-shadow: 0 0 10px #eee;
   border-radius: 10px;
-}
+} */
 
 #buttonUsuarios{
   outline: none;
@@ -48,7 +98,7 @@ background-image: linear-gradient(
 }
 
 #divTurnosCargados{
-  background-color: #0099ff5b;
+  background-color: #0099ffd1;
 }
 
 
@@ -69,3 +119,6 @@ background-image: linear-gradient(
   border: 0;
 }
 
+#navNuestro1{
+  background-color: #0099ff85;
+}

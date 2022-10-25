@@ -19,9 +19,13 @@ export const deleteTurno = (codigo) => {
   }).then((result) => {
     if (result.isConfirmed) {
       turnos.splice(turnoAEliminarIndex, 1);
+      // donde elimino el array?
 
+      // aqui en el setitem pone de nuevo en el local storage lo actualizado
+      
       localStorage.setItem("turnos", JSON.stringify(turnos));
 
+      // aqui supuestamente recarga la tabla
       recargarDatos();
 
       Swal.fire({
