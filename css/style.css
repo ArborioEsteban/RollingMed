@@ -243,14 +243,38 @@ h6{
 
 /* a partir de aqui intentare darle efecto de scroll */
 
-.textoPrincipal{
+/* .textoPrincipal{
     z-index: 500;
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
+} */
+
+.textoPrincipal{
+  z-index: 500;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:clamp (2em,6vw,5em);
 }
+
+/*Estilos textos pagina principal*/
+
+
+.text_pp1{
+z-index: 500;
+position: absolute;
+top: 70%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size:clamp (2em,6vw,5em);
+}
+
+
+
 
 #navNuestro{
   background-color: #230a59;
@@ -258,22 +282,7 @@ h6{
 
 h6{
   font-size: 200%;
-
-/* section#contacto {
-  background-image: url ("../src/medicos.jpeg");
-} */
-
-/* section#home {
-  background-image: url("../src/laboratorio1.img.png");
 }
-section#nosotros {
-  background-image: url("../src/medicos.jpeg");
-} */
-
-section h1 {
-  font-size: 4rem;
-}
-
 
 
 .sectionsScroll h1{

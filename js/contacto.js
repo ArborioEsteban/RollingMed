@@ -55,12 +55,12 @@ inputs.forEach((input) => {
     input.addEventListener('blur', validarFormulario);
 });
 
-formulario.addEventListener('submit', (e) => {
+formularioContacto.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const terminos = document.getElementById('terminos');
     if (campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked) {
-        formulario.reset();
+        formularioContacto.reset();
 
         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
         setTimeout(() => {
