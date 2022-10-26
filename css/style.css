@@ -95,11 +95,15 @@ header .btn1 {
 }
 
 #imgIndex{
-  height: 35%;
+  height: 45%;
   width: 60%;
   object-fit: contain;
   opacity: 0.5;
 }
+
+/* .h1Index{
+  font-size: 2rem;
+} */
 
 #textoSecondary{
   letter-spacing: 0.1rem;
@@ -143,10 +147,10 @@ header .btn1 {
   display: block;
   color: #82dcb8aa;
   text-align: center;
-  padding: 1px 16px;
+  padding: 1px 12px;
   text-decoration: none;
   font-size: 40px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 200;
 }
 
@@ -238,6 +242,12 @@ h6{
   #active {
  text-align: center;
   }
+  .nav2{
+    display: flex;
+    justify-content: end;
+    margin-left: 1px;
+    
+  }
 
 }
 
@@ -281,7 +291,7 @@ position: absolute;
 top: 80%;
 left: 50%;
 transform: translate(-50%, -50%);
-font-size:clamp (2em,6vw,5em);
+/* font-size:clamp (2em,6vw,5em); */
 }
 
 .text_pp2{
