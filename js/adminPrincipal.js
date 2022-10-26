@@ -3,6 +3,28 @@ const listaPacientesLS = JSON.parse(localStorage.getItem("usuarios"));
 
 const formBusquedaMedico =document.getElementById("formBusquedaMedico");
 
+let adminVerificarSesion = sessionStorage.getItem("verificar");
+
+adminVerificarSesion = JSON.parse(adminVerificarSesion);
+
+if(adminVerificarSesion != null){
+  
+} else{
+  Swal.fire({
+    title: "Sesion no valida",
+    text: "No pudimos verificar tu identidad por favor ingrese la contraseña nuevamente",
+    icon: "error",
+    allowOutsideClick: false,
+    allowEnterKey:false,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        window.open("./index.html","_self"),
+      )
+    }
+  })
+}
+
 
 
 
@@ -111,17 +133,16 @@ const crearTabla = (elemento) =>{
 turnosLS.forEach((elemento) => {
     crearTabla(elemento);
   });
-  formBusquedaMedico.addEventListener("submit", (e) => {
-        e.preventDefault();
-      let medico = selectMedicos.value;
+  // formBusquedaMedico.addEventListener("submit", (e) => {
+  //       e.preventDefault();
+  //     let medico = selectMedicos.value;
       
-  });
+  // });
+ 
 
   
   function filterMedicos(){
     let medico = selectMedicos.value;
-    
-
 
   }
 
