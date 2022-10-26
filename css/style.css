@@ -262,16 +262,7 @@ h6{
   background-color: #000;
 }
 
-/* a partir de aqui intentare darle efecto de scroll */
 
-/* .textoPrincipal{
-    z-index: 500;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-} */
 
 .textoPrincipal{
   z-index: 500;
