@@ -34,14 +34,13 @@
 
 .textoAcercaDe{
   font-size: 200%;
-
 }
 
 #Foto_doctora {
   max-width: 100%;
   /* margin-top: 6rem; */
   height:auto;
-  border-radius: 5%;
+  border-radius: 50px;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -54,6 +53,7 @@
   align-items: center;
   /* height: 100vh; */
 }
+
 .Imagen_central figure {
   position: relative;
   height: 800px;
@@ -83,6 +83,7 @@
 .Imagen_central figure:hover > .capa {
   opacity: 1;
   visibility: visible;
+  border-radius: 50px;
 }
 
 .Imagen_central figure:hover > .capa h3 {
@@ -91,13 +92,13 @@
 }
 
 .Imagen_central figure:hover > img {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 .Imagen_central figure:hover > .capa h3 {
   color: #fff;
   font-weight: 400px;
-  margin-bottom: 120px;
+  margin-bottom: 110px;
   transition: all 1000ms ease;
   margin-top: 70px;
 }
@@ -131,7 +132,7 @@
     height: 50%;
     width: 1000px;
     overflow: hidden;
-    border-radius: 50px;
+    /* border-radius: 50px 50px 50px 50px; */
     box-shadow: 0px 15px 25px (gba 0, 0, 0, 0.5);
     cursor: pointer;
   }
@@ -140,11 +141,12 @@
     height: 100%;
     transition: all 1000ms ease;
   }
+
   .Imagen_central figure .capa {
     position: absolute;
-    top: 0;
+    top: 5%;
     width: 100%;
-    height: 100%;
+    height: 95%;
     background: rgba(0, 103, 123, 0.7);
     transition: all 1000ms ease;
     opacity: 0;
@@ -163,6 +165,7 @@
   .Imagen_central figure:hover > .capa {
     opacity: 1;
     visibility: visible;
+    border-radius: 50px;
   }
   
   .Imagen_central figure:hover > .capa h3 {
@@ -172,6 +175,7 @@
   
   .Imagen_central figure:hover > img {
     transform:none;
+    
   }
   
   .Imagen_central figure:hover > .capa h3 {
@@ -188,10 +192,6 @@
     object-fit: cover;
    
   }
-
-
-
-
   .font_frase {
     font-size:small;
    
@@ -203,7 +203,6 @@
 @media screen and (max-width:768px){
 
   .fontFamily__acercaDe {
-
     display: flex;
     justify-content: center;
   }
@@ -221,7 +220,7 @@
     height: 50%;
     width: 1000px;
     overflow: hidden;
-    border-radius: 50px;
+    border-radius: 50px 50px 50px 50px;
     box-shadow: 0px 15px 25px (gba 0, 0, 0, 0.5);
     cursor: pointer;
   }
@@ -232,9 +231,9 @@
   }
   .Imagen_central figure .capa {
     position: absolute;
-    top: 0;
+    top: 5%;
     width: 100%;
-    height: 100%;
+    height: 95%;
     background: rgba(0, 103, 123, 0.7);
     transition: all 1000ms ease;
     opacity: 0;
@@ -253,15 +252,19 @@
   .Imagen_central figure:hover > .capa {
     opacity: 1;
     visibility: visible;
+    border-radius: 50px;
+    
+
   }
   
   .Imagen_central figure:hover > .capa h3 {
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 5px;
   }
   
   .Imagen_central figure:hover > img {
     transform:none;
+    
   }
   
   .Imagen_central figure:hover > .capa h3 {
@@ -272,17 +275,11 @@
     margin-top: 10px;
   }
 
-
   #Foto_doctora {
-
-    object-fit: cover;
-   
+    object-fit: cover; 
   }
-
-
   .font_frase {
     font-size:small;
-   
   }
 
 
