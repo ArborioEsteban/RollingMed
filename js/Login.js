@@ -27,11 +27,13 @@ loginModal.addEventListener('hidden.bs.modal', function (event) {
 
 formLogin.addEventListener("submit", (e)=>{
     e.preventDefault();
-    
     let pass = "roll";
     if(passwordAdmin.value === pass){
+        let verificarSession = ["correcto","1"];
+        sessionStorage.setItem("verificar", JSON.stringify(verificarSession));
+        
         passwordAdmin.classList = "form-control is-valid";
-        window.open("./adminPrincipal.html","_self");
+        window.open("./adminPrincipal.html","_self");    
     }else{
         passwordAdmin.classList = "form-control is-invalid";
     }

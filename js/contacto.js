@@ -84,4 +84,3 @@ export const validarMensaje = (valor, campo) => {
             campoMensajeContacto.classList += "form-control";
                     
       })
-

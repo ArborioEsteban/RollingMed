@@ -217,3 +217,26 @@ export const recargarDatos = () => {
     crearTurnoTabla(elemento);
   });
 };
+
+
+let adminVerificarSesion = sessionStorage.getItem("verificar");
+
+adminVerificarSesion = JSON.parse(adminVerificarSesion);
+
+if(adminVerificarSesion != null){
+  
+} else{
+  Swal.fire({
+    title: "Sesion no valida",
+    text: "No pudimos verificar tu identidad por favor ingrese la contraseña nuevamente",
+    icon: "error",
+    allowOutsideClick: false,
+    allowEnterKey:false,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        window.open("./index.html","_self"),
+      )
+    }
+  })
+}
